@@ -1,0 +1,54 @@
+.crud-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.crud-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.crud-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.crud-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.crud-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.crud-table th {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.crud-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.crud-actions span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.crud-actions .edit {
+  color: blue;
+}
+
+.crud-actions .delete {
+  color: red;
+}

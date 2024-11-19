@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Library Management System</h1>
+      </header>
+
+      <div class="top-sections">
+        <section id="available-books-section">
+          <h2>
+            Available Books
+            <button id="add-book-btn" onclick="toggleAddBookForm()">+</button>
+          </h2>
+          <ul id="available-books-list"></ul>
+        </section>
+
+        <div class="modal" id="add-book-modal">
+          <div class="modal-content">
+            <!-- <span class="close-button" onclick="toggleAddBookForm()">+</span> -->
+            <h3>Add New Book</h3>
+            <input type="text" id="book-title" placeholder="Enter Book Title" />
+            <input
+              type="text"
+              id="book-author"
+              placeholder="Enter Book Author"
+            />
+            <button onclick="addBook()">Add Book</button>
+          </div>
+        </div>
+
+        <section id="borrowed-books-section">
+          <h2>Borrowed Books by Users</h2>
+          <ul id="borrowed-books-list"></ul>
+        </section>
+      </div>
+
+      <div class="bottom-sections">
+        <section id="create-user-section">
+          <h3>Create User / Member</h3>
+          <input type="text" id="user-name" placeholder="Enter Name" />
+          <input
+            type="text"
+            id="membership-id"
+            placeholder="Membership ID (Optional)"
+          />
+          <button onclick="createUser()">Create User</button>
+        </section>
+
+        <section id="borrow-book-section">
+          <h3>Borrow a Book</h3>
+          <select id="user-select-borrow">
+            <option value="">Select a user</option>
+          </select>
+          <select id="borrowed-book-select">
+            <option value="">Select a book</option>
+          </select>
+          <button onclick="borrowBook()">Borrow Book</button>
+        </section>
+
+        <section id="return-book-section">
+          <h3>Return a Book</h3>
+          <select id="user-select-return">
+            <option value="">Select a user</option>
+          </select>
+          <select id="return-book-title">
+            <option value="">Select a book</option>
+          </select>
+          <button onclick="returnBook()" class="return-btn">Return Book</button>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
